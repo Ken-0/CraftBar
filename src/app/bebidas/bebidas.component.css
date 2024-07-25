@@ -1,0 +1,229 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(237, 232, 202, 0.725); /* Fondo semitransparente */
+    min-height: calc(100vh - 140px); /* Ajustar la altura del contenido principal */
+    background-image: url('../../assets/images/Craft.jpg'); /* Ruta corregida */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+header {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-bottom: 5px solid #7a3a2f; /* Color café oscuro */
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 10px);
+    background: url('https://img.pikbest.com/wp/202344/vignette-elegant-charcoal-wood-texture-with-and-shadow-effect-on-gray-wooden-background_9934836.jpg!w700wp') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+header h1 {
+    animation: none; /* Detiene la animación cuando se pasa el cursor sobre el título */
+    background: linear-gradient(to top, #feb47b, #ff7e5f); /* Degradado más brillante al pasar el cursor */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Color de texto al pasar el cursor se sigue manejando por el degradado */
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 165, 0, 0.7); /* Sombra más pronunciada y cálida */
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.topnav {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg, #000000, #3d2b1f); /* Degradado entre negro y café */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    animation: fadeIn 1s ease-out;
+}
+
+.topnav a {
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin: 0 10px;
+    position: relative;
+    background: transparent;
+}
+
+.topnav a:hover {
+    background: #7a3a2f; /* Color café oscuro */
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.topnav a i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .topnav {
+        flex-direction: column;
+        padding: 0;
+        border-radius: 0;
+    }
+    .topnav a {
+        padding: 10px 15px;
+        text-align: left;
+    }
+}
+
+.section-title:hover,
+.gallery-title:hover {
+    text-shadow: 0 6px 12px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 100, 100, 0.5); /* Sombra más pronunciada al pasar el cursor */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Degradado cálido y visible */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Mantiene el degradado del fondo */
+    transform: sca;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gallery-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #d8cab3cb;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    max-width: 200px; /* Ajusta el ancho máximo según sea necesario */
+    margin: 0 auto; /* Centra las tarjetas en el contenedor */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 97%;
+    height: 150px;
+    display: block;
+}
+
+.card-content {
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Para mantener la posición del contenido durante el hover */
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-text p {
+    text-align: center;
+    display: none;
+    background: linear-gradient(to right, #292d2f, #1b2527); /* Fondo negro para los ingredientes */
+    color: #ffffff;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card:hover .card-text p {
+    display: block;
+    text-align: center;
+}
+
+.card-text h5 {
+    text-align: center;
+    background: linear-gradient(to bottom, #340a00, #ffb47b); /* Degradado de arriba hacia abajo */
+    margin: 5px 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+}

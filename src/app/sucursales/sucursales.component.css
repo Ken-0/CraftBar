@@ -1,0 +1,189 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://api.products.aspose.app/page/api/files?uri=ae2f3261-1caf-4a78-94b1-d020eb0ca4ef.png') no-repeat center center fixed; /* Añadir imagen de fondo */
+    background-size:auto; /* Asegurar que la imagen cubra toda la pantalla */
+}
+
+header {
+    position: relative;
+    background-color: rgba(0, 123, 255, 0.9); /* Fondo semitransparente */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; /* Asegura que los hijos absolutos no se desborden */
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 10px); /* Ajusta la altura para cubrir la barra de navegación */
+    background: url('https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/434244462_744442631129201_7045244618661726163_n.jpg?stp=dst-jpg_s960x960&_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=9CQiU_GcvncQ7kNvgEaDOdP&_nc_ht=scontent.fagu3-1.fna&oh=00_AYBFgVfhp3YWP-9MEaCbzOAiCRaXz-C0CVGk0z34ZRgrRA&oe=66A09785') no-repeat center center; /* URL de la imagen */
+    background-size: cover;
+    opacity: 0.5; /* Ajusta la opacidad para el efecto semitransparente */
+    z-index: 1;
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+}
+
+.topnav {
+    position: relative; /* Asegura que la barra de navegación esté sobre la imagen */
+    z-index: 2; /* Coloca la barra de navegación sobre la imagen */
+    overflow: hidden;
+    background-color: rgba(52, 58, 64, 0.9); /* Fondo semitransparente */
+    display: flex;
+    justify-content: space-around; /* Distribuye el espacio entre los elementos */
+    padding: 10px 0; /* Añade padding superior e inferior */
+}
+
+.topnav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s;
+    display: flex; /* Usar flexbox para centrar el contenido verticalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+}
+
+.topnav a i {
+    margin-right: 8px;
+}
+
+.topnav a:hover {
+    background-color: #575757;
+    color: white;
+}
+main {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    min-height: calc(100vh - 140px); /* Ajustar la altura del contenido principal */
+}
+
+@media screen and (max-width: 600px) {
+    .topnav {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        padding: 0;
+    }
+    .topnav a {
+        padding: 10px 15px;
+        text-align: left;
+    }
+}
+
+
+
+.footer-content {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.social-media a:hover {
+    color: #ddd;
+}
+
+.map-container {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #383838;
+    border-top: 1px solid #393838;
+    margin-top: 10px;
+}
+.footer-bottom p {
+    margin: 5px 0;
+}
+.footer-bottom a {
+    color: #007bff;
+    text-decoration: none;
+}
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav {
+        flex-direction: column;
+        padding: 0;
+    }
+    .topnav a {
+        padding: 10px 15px;
+        text-align: left;
+    }
+}
+
+.watermark {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    opacity: 0.6;
+    width: 60px; /* Tamaño de la imagen */
+    height: 50px; /* Tamaño de la imagen */
+}
+.watermark img {
+    width: 100%;
+    height: auto;
+}

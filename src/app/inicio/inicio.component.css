@@ -1,0 +1,205 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(237, 232, 202, 0.725); /* Fondo semitransparente */
+    min-height: calc(100vh - 140px); /* Ajustar la altura del contenido principal */
+    background-image: url('../../assets/images/Craft.jpg'); /* Ruta corregida */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+header {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-bottom: 5px solid #7a3a2f; /* Color café oscuro */
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 10px);
+    background: url('https://img.pikbest.com/wp/202344/vignette-elegant-charcoal-wood-texture-with-and-shadow-effect-on-gray-wooden-background_9934836.jpg!w700wp') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+header h1 {
+    animation: none; /* Detiene la animación cuando se pasa el cursor sobre el título */
+    background: linear-gradient(to top, #feb47b, #ff7e5f); /* Degradado más brillante al pasar el cursor */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Color de texto al pasar el cursor se sigue manejando por el degradado */
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 165, 0, 0.7); /* Sombra más pronunciada y cálida */
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.topnav {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg, #000000, #3d2b1f); /* Degradado entre negro y café */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    animation: fadeIn 1s ease-out;
+}
+
+.topnav a {
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin: 0 10px;
+    position: relative;
+    background: transparent;
+}
+
+.topnav a:hover {
+    background: #7a3a2f; /* Color café oscuro */
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.topnav a i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav {
+        flex-direction: column;
+        padding: 0;
+        border-radius: 0;
+    }
+    .topnav a {
+        padding: 10px 15px;
+        text-align: left;
+    }
+}
+
+.info-section {
+    padding: 20px;
+}
+
+.carousel-inner img {
+    width: 100%;  /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    height: auto;  /* Mantiene la proporción de las imágenes */
+    max-height: 500px;  /* Establece una altura máxima para las imágenes */
+}
+
+.carousel-section {
+    margin: 20px auto;  /* Centra la sección y añade un margen */
+    max-width: 800px;  /* Limita el ancho máximo de la sección */
+}
+
+.carousel-indicators button {
+    background-color: #000;  /* Cambia el color de los indicadores */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000;  /* Cambia el color de los iconos de navegación */
+}
+
+.welcome-section {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.info-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.info-section h2, .info-section h3 {
+    color: #007bff;
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-section ul li {
+    background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDA3YmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiPjxwYXRoIGQ9Ik0zLjMzNSAwbDEuNzA4IDEuNzA4TDMuMzM1IDUuMDc4IDEuNjI3IDMuMzcyIDAgNS4wNzdMMi41MiA4bDIuMzI2LTIuMzI2TDUgMi4xMzIgMy4zMzUgMHoiLz48L3N2Zz4=') no-repeat left center;
+    background-size: 1rem;
+    padding-left: 1.5rem;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        padding: 0;
+    }
+    .topnav a {
+        padding: 10px 15px;
+        text-align: left;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+}

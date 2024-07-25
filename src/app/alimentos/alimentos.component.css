@@ -1,0 +1,151 @@
+
+.topnav {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg, #000000, #3d2b1f); /* Degradado entre negro y café */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    animation: fadeIn 1s ease-out;
+}
+
+.topnav a {
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin: 0 10px;
+    position: relative;
+    background: transparent;
+}
+
+.topnav a:hover {
+    background: #7a3a2f; /* Color café oscuro */
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.topnav a i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .topnav {
+        flex-direction: column;
+        padding: 0;
+        border-radius: 0;
+    }
+    .topnav a {
+        padding: 10px 15px;
+        text-align: left;
+    }
+}
+
+.section-title,
+.gallery-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gallery-section {
+    padding: 10px;
+}
+
+.gallery {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+
+}
+
+.card {
+    background: #d8cab3cb;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    margin: 10px;
+    width: 200px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 97%;
+    height: 150px;
+    display: block;
+}
+
+.card-content {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-text p {
+    text-align: center;
+    display: none; /* Ocultar el párrafo inicialmente */
+    background: linear-gradient(to right, #0c8dbb, #34c1dd); /* Degradado de fondo */
+
+    /* Tipografía */
+    font-family: "Courier New", Courier, monospace;/* Familia de fuentes */
+    font-size: 9px; /* Tamaño de la fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    font-style: italic; /* Estilo de la fuente (normal, italic, oblique) */
+    text-transform: capitalize; /* Transformación del texto (uppercase, lowercase, capitalize) */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    line-height: 1.5; /* Altura de línea */
+}
+
+.card:hover .card-text p {
+    display: block; /* Mostrar el párrafo cuando el cursor pasa sobre .card */
+}
+
+.card-text h5 {
+    text-align: center;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Degradado de fondo */
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+
+    /* Tipografía */
+    font-family: "Comic Sans MS", cursive, sans-serif;/* Familia de fuentes */
+    font-size: 12px; /* Tamaño de la fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    font-style: oblique; /* Estilo de la fuente (normal, italic, oblique) */
+    text-transform: uppercase; /* Transformación del texto (uppercase, lowercase, capitalize) */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    line-height: 1.5; /* Altura de línea */
+}
+
+.card-text h4 {
+    text-align: center;
+    background: linear-gradient(to right, #51fcaf, #32c75f); /* Degradado de fondo */
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+
+    /* Tipografía */
+    font-family: "Comic Sans MS", cursive, sans-serif;/* Familia de fuentes */
+    font-size: 12px; /* Tamaño de la fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    font-style: oblique; /* Estilo de la fuente (normal, italic, oblique) */
+    text-transform: uppercase; /* Transformación del texto (uppercase, lowercase, capitalize) */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    line-height: 1.5; /* Altura de línea */
+}
